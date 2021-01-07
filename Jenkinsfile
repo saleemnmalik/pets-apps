@@ -5,11 +5,6 @@ pipeline{
           }
 	
 	stages{
-		stage('Git Chekcout'){
-		steps{
-			git credentialsId: 'github', url: 'https://github.com/saleemnmalik/pets-apps'
-		}
-		}
 	stage('maven build/package'){
 		steps{
 			sh 'mvn clean package'
