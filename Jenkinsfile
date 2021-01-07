@@ -29,5 +29,16 @@ pipeline{
 		}
 		}
 
+		stage('Tomcat Deployment'){
+		steps{
+			sshagent(['tomcat-dev']) {
+   				sh "scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.44.128:/opt/tomcat8/webapps/pets-app.war"
+
+				sh "ssh ec2-user@172.31.44.128 /opt/tomcat8/bin/shutdown.sh"
+				sh "ssh ec2-user@172.31.44.128 /opt/tomcat8/bin/startup.sh"
+			 }
+		}
+		}
+
 	}
 }
