@@ -58,6 +58,11 @@ Saleem''',
   }
   failure {
     // send failure message
+	mail  body: '''Hi Team,
+The build failed
+Thanks,
+Saleem''',
+ 	 subject: 'Build Failed', to: 'saleemnmalik@gmail.com'
   }
 }
 
