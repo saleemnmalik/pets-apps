@@ -53,14 +53,14 @@ pipeline{
 	mail bcc: '', body: '''Hi Team,
 Success
 Thanks,
-saleem''', cc: '', from: '', replyTo: '', subject: 'Devops Team', to: 'saleemnmalik@gmail.com'
+saleem''', cc: '', from: '', replyTo: '', subject: 'Devops Team', to: 'sqnsaleem@gmail.com'
   }
   failure {
     // send failure message
 	mail bcc: '', body: '''Hi Team,
 failure
 Thanks,
-saleem''', cc: '', from: '', replyTo: '', subject: 'Devops Team', to: 'saleemnmalik@gmail.com'
+saleem''', cc: '', from: '', replyTo: '', subject: 'Devops Team', to: 'sqnsaleem@gmail.com'
   }
 }
 
