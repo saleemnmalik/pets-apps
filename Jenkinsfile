@@ -50,19 +50,17 @@ pipeline{
 	post {
   success {
     // send success message
-	mail  body: '''Hi Team,
-The build completed successfully
-Thanks,
-Saleem''',
- 	 subject: 'Build success', to: 'saleemnmalik@gmail.com'
+	mail body: '''Hi Team
+Succesfull
+Thanks''', 
+ subject: 'Devops Team', to: 'sqnsaleem@gmail.com'
   }
   failure {
     // send failure message
-	mail  body: '''Hi Team,
-The build failed
-Thanks,
-Saleem''',
- 	 subject: 'Build Failed', to: 'saleemnmalik@gmail.com'
+	mail body: '''Hi Team
+Succesfull
+Thanks''', 
+ subject: 'Devops Team', to: 'sqnsaleem@gmail.com'
   }
 }
 
