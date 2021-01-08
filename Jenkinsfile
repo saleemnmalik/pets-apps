@@ -46,4 +46,19 @@ pipeline{
 		}
 
 	}
+
+	post {
+  success {
+    // send success message
+	mail  body: '''Hi Team,
+The build completed successfully
+Thanks,
+Saleem''',
+ 	 subject: 'Build success', to: 'saleemnmalik@gmail.com'
+  }
+  failure {
+    // send failure message
+  }
+}
+
 }
